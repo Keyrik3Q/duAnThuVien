@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.thuvien.service.GiaHanLocalService" class="com.thuvien.service.impl.GiaHanLocalServiceImpl" />
+	<bean id="com.thuvien.service.GiaHanService" class="com.thuvien.service.impl.GiaHanServiceImpl" />
+	<bean id="com.thuvien.service.persistence.GiaHanPersistence" class="com.thuvien.service.persistence.GiaHanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlthuvienDataSource" />
+	</bean>
+	<bean id="com.thuvien.service.persistence.GiaHanFinder" class="com.thuvien.service.persistence.GiaHanFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlthuvienDataSource" />
+	</bean>
+	<bean id="com.thuvien.service.PhieuMuonLocalService" class="com.thuvien.service.impl.PhieuMuonLocalServiceImpl" />
+	<bean id="com.thuvien.service.PhieuMuonService" class="com.thuvien.service.impl.PhieuMuonServiceImpl" />
+	<bean id="com.thuvien.service.persistence.PhieuMuonPersistence" class="com.thuvien.service.persistence.PhieuMuonPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlthuvienDataSource" />
+	</bean>
+	<bean id="com.thuvien.service.persistence.PhieuMuonFinder" class="com.thuvien.service.persistence.PhieuMuonFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlthuvienDataSource" />
+	</bean>
+	<bean id="com.thuvien.service.PhuongThanhPhoLocalService" class="com.thuvien.service.impl.PhuongThanhPhoLocalServiceImpl" />
+	<bean id="com.thuvien.service.PhuongThanhPhoService" class="com.thuvien.service.impl.PhuongThanhPhoServiceImpl" />
+	<bean id="com.thuvien.service.persistence.PhuongThanhPhoPersistence" class="com.thuvien.service.persistence.PhuongThanhPhoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlthuvienDataSource" />
+	</bean>
+	<bean id="com.thuvien.service.QuanThanhPhoLocalService" class="com.thuvien.service.impl.QuanThanhPhoLocalServiceImpl" />
+	<bean id="com.thuvien.service.QuanThanhPhoService" class="com.thuvien.service.impl.QuanThanhPhoServiceImpl" />
+	<bean id="com.thuvien.service.persistence.QuanThanhPhoPersistence" class="com.thuvien.service.persistence.QuanThanhPhoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlthuvienDataSource" />
+	</bean>
+	<bean id="com.thuvien.service.SachLocalService" class="com.thuvien.service.impl.SachLocalServiceImpl" />
+	<bean id="com.thuvien.service.SachService" class="com.thuvien.service.impl.SachServiceImpl" />
+	<bean id="com.thuvien.service.persistence.SachPersistence" class="com.thuvien.service.persistence.SachPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlthuvienDataSource" />
+	</bean>
+	<bean id="com.thuvien.service.persistence.SachFinder" class="com.thuvien.service.persistence.SachFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlthuvienDataSource" />
+	</bean>
+	<bean id="com.thuvien.service.TheLoaiLocalService" class="com.thuvien.service.impl.TheLoaiLocalServiceImpl" />
+	<bean id="com.thuvien.service.TheLoaiService" class="com.thuvien.service.impl.TheLoaiServiceImpl" />
+	<bean id="com.thuvien.service.persistence.TheLoaiPersistence" class="com.thuvien.service.persistence.TheLoaiPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlthuvienDataSource" />
+	</bean>
+	<bean id="com.thuvien.service.persistence.TheLoaiFinder" class="com.thuvien.service.persistence.TheLoaiFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlthuvienDataSource" />
+	</bean>
+	<bean id="com.thuvien.service.TinhThanhPhoLocalService" class="com.thuvien.service.impl.TinhThanhPhoLocalServiceImpl" />
+	<bean id="com.thuvien.service.TinhThanhPhoService" class="com.thuvien.service.impl.TinhThanhPhoServiceImpl" />
+	<bean id="com.thuvien.service.persistence.TinhThanhPhoPersistence" class="com.thuvien.service.persistence.TinhThanhPhoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="qlthuvienDataSource" />
+	</bean>
+</beans>

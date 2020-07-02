@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.thuvien">
+	<author>ADMIN</author>
+	<namespace>ThuVienQuanLy</namespace>
+
+	<entity local-service="true" name="Sach" table="sach" data-source="qlthuvienDataSource" remote-service="true">
+		<column name="Id" db-name="id" primary="true" type="long"></column>
+		<column name="TenSach" db-name="tensach" type="String"></column>
+		<column name="TheLoaiId" db-name="theloaiid" type="long"></column>
+		<column name="SoLuong" db-name="soluongsach" type="long"></column>
+		<column name="TrangThai" db-name="trangthai" type="String"></column>
+		<column name="NhaXB" db-name="nhaxb" type="String"></column>
+		<column name="MaSach" db-name="masach" type="String"></column>
+		<column name="Ke" db-name="ke" type="String"></column>
+		<column name="Tang" db-name="tang" type="String"></column>
+		<column name="Mota" db-name="mota" type="String"></column>
+	</entity>
+	<entity local-service="true" name="TheLoai" table="theloai" data-source="qlthuvienDataSource" remote-service="true">
+		<column name="Id" db-name="id" primary="true" type="long"></column>
+		<column name="TenTheLoai" db-name="tentheloai" type="String"></column>
+	</entity>
+	<entity local-service="true" name="PhieuMuon" table="phieumuon" data-source="qlthuvienDataSource" remote-service="true">
+		<column name="Id" db-name="id" primary="true" type="long"></column>
+		<column name="UserId" db-name="userid" type="String"></column>
+		<column name="SachId" db-name="sachid" type="long"></column>
+		<column name="NgayMuon" db-name="ngaymuon" type="Date"></column>
+		<column name="NgayTra" db-name="ngaytra" type="Date"></column>
+		<column name="SoLuong" db-name="soluong" type="long"></column>
+		<column name="XacNhan" db-name="xacnhan" type="String"></column>
+		<column name="TrangThai" db-name="trangthai" type="String"></column>
+		<column name="TraSach" db-name="trasach" type="long"></column>
+		<column name="GiaHanSach" db-name="giahansach" type="long"></column>
+	</entity>
+	<entity local-service="true" name="GiaHan" table="giahan" data-source="qlthuvienDataSource">
+		<column name="IdGh" db-name="idgh" primary="true" type="long"></column>
+		<column name="NgayGianHan" db-name="ngaygiahan" type="Date"></column>
+		<column name="PhieuMuonId" db-name="phieumuonid" type="long"></column>
+		<column name="TrangThai" db-name="trangthai" type="String"></column>
+	</entity>
+	<entity local-service="true" name="TinhThanhPho" table="tinhthanhpho" data-source="qlthuvienDataSource">
+		<column name="name" db-name="idgh" primary="true" type="long"></column>
+		<column name="Type" db-name="type" type="String"></column>
+	</entity>
+	<entity local-service="true" name="QuanThanhPho" table="quanthanhpho" data-source="qlthuvienDataSource">
+		<column name="name" db-name="idgh" primary="true" type="long"></column>
+		<column name="Type" db-name="type" type="String"></column>
+		<column name="TinhThanhPhoId" db-name="tinhthanhphoid" type="String"></column>
+	</entity>
+	<entity local-service="true" name="PhuongThanhPho" table="phuongthanhpho" data-source="qlthuvienDataSource">
+		<column name="name" db-name="idgh" primary="true" type="long"></column>
+		<column name="Type" db-name="type" type="String"></column>
+		<column name="QuanThanhPhoId" db-name="quanthanhphoid" type="String"></column>
+	</entity>
+</service-builder>

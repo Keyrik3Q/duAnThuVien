@@ -1,0 +1,1 @@
+create index IX_55022898 on QuanLyThuVien_Foo (field2);

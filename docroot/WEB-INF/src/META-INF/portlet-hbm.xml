@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.thuvien.model.GiaHan" />
+	<import class="com.thuvien.model.PhieuMuon" />
+	<import class="com.thuvien.model.PhuongThanhPho" />
+	<import class="com.thuvien.model.QuanThanhPho" />
+	<import class="com.thuvien.model.Sach" />
+	<import class="com.thuvien.model.TheLoai" />
+	<import class="com.thuvien.model.TinhThanhPho" />
+	<class name="com.thuvien.model.impl.GiaHanImpl" table="giahan">
+		<cache usage="read-write" />
+		<id name="IdGh" column="idgh" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="NgayGianHan" type="org.hibernate.type.TimestampType" column="ngaygiahan" />
+		<property name="PhieuMuonId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="phieumuonid" />
+		<property name="TrangThai" type="com.liferay.portal.dao.orm.hibernate.StringType" column="trangthai" />
+	</class>
+	<class name="com.thuvien.model.impl.PhieuMuonImpl" table="phieumuon">
+		<cache usage="read-write" />
+		<id name="Id" column="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="UserId" type="com.liferay.portal.dao.orm.hibernate.StringType" column="userid" />
+		<property name="SachId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="sachid" />
+		<property name="NgayMuon" type="org.hibernate.type.TimestampType" column="ngaymuon" />
+		<property name="NgayTra" type="org.hibernate.type.TimestampType" column="ngaytra" />
+		<property name="SoLuong" type="com.liferay.portal.dao.orm.hibernate.LongType" column="soluong" />
+		<property name="XacNhan" type="com.liferay.portal.dao.orm.hibernate.StringType" column="xacnhan" />
+		<property name="TrangThai" type="com.liferay.portal.dao.orm.hibernate.StringType" column="trangthai" />
+		<property name="TraSach" type="com.liferay.portal.dao.orm.hibernate.LongType" column="trasach" />
+		<property name="GiaHanSach" type="com.liferay.portal.dao.orm.hibernate.LongType" column="giahansach" />
+	</class>
+	<class name="com.thuvien.model.impl.PhuongThanhPhoImpl" table="phuongthanhpho">
+		<cache usage="read-write" />
+		<id name="name" column="idgh" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="Type" type="com.liferay.portal.dao.orm.hibernate.StringType" column="type" />
+		<property name="QuanThanhPhoId" type="com.liferay.portal.dao.orm.hibernate.StringType" column="quanthanhphoid" />
+	</class>
+	<class name="com.thuvien.model.impl.QuanThanhPhoImpl" table="quanthanhpho">
+		<cache usage="read-write" />
+		<id name="name" column="idgh" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="Type" type="com.liferay.portal.dao.orm.hibernate.StringType" column="type" />
+		<property name="TinhThanhPhoId" type="com.liferay.portal.dao.orm.hibernate.StringType" column="tinhthanhphoid" />
+	</class>
+	<class name="com.thuvien.model.impl.SachImpl" table="sach">
+		<cache usage="read-write" />
+		<id name="Id" column="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="TenSach" type="com.liferay.portal.dao.orm.hibernate.StringType" column="tensach" />
+		<property name="TheLoaiId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="theloaiid" />
+		<property name="SoLuong" type="com.liferay.portal.dao.orm.hibernate.LongType" column="soluongsach" />
+		<property name="TrangThai" type="com.liferay.portal.dao.orm.hibernate.StringType" column="trangthai" />
+		<property name="NhaXB" type="com.liferay.portal.dao.orm.hibernate.StringType" column="nhaxb" />
+		<property name="MaSach" type="com.liferay.portal.dao.orm.hibernate.StringType" column="masach" />
+		<property name="Ke" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ke" />
+		<property name="Tang" type="com.liferay.portal.dao.orm.hibernate.StringType" column="tang" />
+		<property name="Mota" type="com.liferay.portal.dao.orm.hibernate.StringType" column="mota" />
+	</class>
+	<class name="com.thuvien.model.impl.TheLoaiImpl" table="theloai">
+		<cache usage="read-write" />
+		<id name="Id" column="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="TenTheLoai" type="com.liferay.portal.dao.orm.hibernate.StringType" column="tentheloai" />
+	</class>
+	<class name="com.thuvien.model.impl.TinhThanhPhoImpl" table="tinhthanhpho">
+		<cache usage="read-write" />
+		<id name="name" column="idgh" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="Type" type="com.liferay.portal.dao.orm.hibernate.StringType" column="type" />
+	</class>
+</hibernate-mapping>

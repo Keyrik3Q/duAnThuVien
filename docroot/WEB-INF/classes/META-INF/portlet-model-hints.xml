@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.thuvien.model.GiaHan">
+		<field name="IdGh" type="long" />
+		<field name="NgayGianHan" type="Date" />
+		<field name="PhieuMuonId" type="long" />
+		<field name="TrangThai" type="String" />
+	</model>
+	<model name="com.thuvien.model.PhieuMuon">
+		<field name="Id" type="long" />
+		<field name="UserId" type="String" />
+		<field name="SachId" type="long" />
+		<field name="NgayMuon" type="Date" />
+		<field name="NgayTra" type="Date" />
+		<field name="SoLuong" type="long" />
+		<field name="XacNhan" type="String" />
+		<field name="TrangThai" type="String" />
+		<field name="TraSach" type="long" />
+		<field name="GiaHanSach" type="long" />
+	</model>
+	<model name="com.thuvien.model.PhuongThanhPho">
+		<field name="name" type="long" />
+		<field name="Type" type="String" />
+		<field name="QuanThanhPhoId" type="String" />
+	</model>
+	<model name="com.thuvien.model.QuanThanhPho">
+		<field name="name" type="long" />
+		<field name="Type" type="String" />
+		<field name="TinhThanhPhoId" type="String" />
+	</model>
+	<model name="com.thuvien.model.Sach">
+		<field name="Id" type="long" />
+		<field name="TenSach" type="String" />
+		<field name="TheLoaiId" type="long" />
+		<field name="SoLuong" type="long" />
+		<field name="TrangThai" type="String" />
+		<field name="NhaXB" type="String" />
+		<field name="MaSach" type="String" />
+		<field name="Ke" type="String" />
+		<field name="Tang" type="String" />
+		<field name="Mota" type="String" />
+	</model>
+	<model name="com.thuvien.model.TheLoai">
+		<field name="Id" type="long" />
+		<field name="TenTheLoai" type="String" />
+	</model>
+	<model name="com.thuvien.model.TinhThanhPho">
+		<field name="name" type="long" />
+		<field name="Type" type="String" />
+	</model>
+</model-hints>
